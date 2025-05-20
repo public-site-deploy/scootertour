@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scooter Tour</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -41,15 +42,25 @@
 
   <section class="section contact">
     <h2>Contatti</h2>
-    <p>Email: <a href="mailto:scootertour@gmail.com">scootertour@gmail.com</a></p>
-    <p>Telefono: <a href="tel:3331231231">3331231231</a></p>
+    <div class="contact-details">
+      <p><strong>Email:</strong> <a href="mailto:scootertour@gmail.com">scootertour@gmail.com</a></p>
+      <p><strong>Telefono:</strong> <a href="tel:3331231231">333 123 1231</a></p>
+    </div>
+    <p class="form-info">Puoi contattarci direttamente via email o telefono, oppure lascia i tuoi dati e ti ricontatteremo al più presto.</p>
     <form id="contact-form">
       <input type="text" name="nome" placeholder="Il tuo nome" required>
-      <input type="email" name="email" placeholder="La tua email" required>
+      <input type="text" name="recapito" placeholder="La tua email o telefono" required>
       <textarea name="messaggio" placeholder="Il tuo messaggio" rows="5" required></textarea>
       <button type="submit">Invia</button>
     </form>
   </section>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Scooter Tour - Tutti i diritti riservati</p>
+      <p>Seguici su <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </div>
+  </footer>
 
   <script>
     // Gestione invio form
@@ -58,14 +69,14 @@
       event.preventDefault();
 
       const nome = form.nome.value;
-      const email = form.email.value;
+      const recapito = form.recapito.value;
       const messaggio = form.messaggio.value;
 
       const scriptURL = 'https://script.google.com/macros/s/ID_DEL_TUO_SCRIPT/exec';
       fetch(scriptURL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ nome, email, messaggio })
+        body: new URLSearchParams({ nome, recapito, messaggio })
       })
       .then(response => alert("Messaggio inviato con successo!"))
       .catch(error => alert("Si è verificato un errore."));
