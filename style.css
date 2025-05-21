@@ -6,6 +6,69 @@ body {
   color: #222;
 }
 
+nav.top-nav {
+  background-color: #3db0ff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav.top-nav ul li {
+  position: relative;
+}
+
+nav.top-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem;
+  display: block;
+  transition: color 0.3s;
+}
+
+nav.top-nav ul li a:hover {
+  color: #e0f7fa;
+}
+
+nav.top-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav.top-nav .dropdown-content li a {
+  color: #222;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+}
+
+nav.top-nav .dropdown-content li a:hover {
+  background-color: #f0f0f0;
+}
+
+nav.top-nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav.top-nav .lang-toggle {
+  margin-left: auto;
+}
+
 header {
   text-align: center;
   padding: 4rem 1rem;
