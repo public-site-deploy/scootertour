@@ -54,29 +54,28 @@
 </section>
 
 <section class="section contact">
-  <h2>Contatti</h2>
+  <h2>Contact</h2>
   <div class="contact-details">
     <p><strong>Email:</strong> <a href="mailto:scootertour@gmail.com">scootertour@gmail.com</a></p>
     <p><strong>Telefono:</strong> <a href="tel:3331231231">333 123 1231</a></p>
   </div>
-  <p class="form-info">Puoi contattarci direttamente via email o telefono, oppure lascia i tuoi dati e ti ricontatteremo al più presto.</p>
+  <p class="form-info">You can contact us directly via email or phone, or leave your details and we will get back to you as soon as possible.</p>
   <form id="contact-form">
-    <input type="text" name="nome" placeholder="Il tuo nome" required>
-    <input type="text" name="recapito" placeholder="La tua email o telefono" required>
-    <textarea name="messaggio" placeholder="Il tuo messaggio" rows="5" required></textarea>
+    <input type="text" name="nome" placeholder="Your name" required>
+    <input type="text" name="recapito" placeholder="Your email or phone number" required>
+    <textarea name="messaggio" placeholder="Your message" rows="5" required></textarea>
     <button type="submit">Invia</button>
   </form>
 </section>
 
 <footer>
   <div class="footer-container">
-    <p>&copy; 2025 Scooter Tour - Tutti i diritti riservati</p>
+    <p>&copy; 2025 Scooter Tour - All rights reserved</p>
     <p>Seguici su <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
   </div>
 </footer>
 
 <script>
-  // Gestione invio form
   const form = document.getElementById("contact-form");
   form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -91,8 +90,8 @@
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({ nome, recapito, messaggio })
     })
-    .then(response => alert("Messaggio inviato con successo!"))
-    .catch(error => alert("Si è verificato un errore."));
+    .then(response => alert("Message sent successfully!"))
+    .catch(error => alert("An error has occurred."));
   });
 </script>
 </body>
