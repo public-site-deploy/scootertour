@@ -5,36 +5,49 @@
   <link rel="stylesheet" href="style.css">
 </head><body>
 
-<nav class="top-nav">
-  <ul>
-    <li><a href="/en/index.html">Home</a></li>
-    <li class="dropdown">
-      <a href="#">Itinerari</a>
-      <ul class="dropdown-content">
-        <li><a href="/en/borgo-antico.html">Borgo Antico</a></li>
-        <li><a href="/en/marina-blu.html">Marina Blu</a></li>
-        <li><a href="/en/collina-verde.html">Collina Verde</a></li>
-      </ul>
-    </li>
-    <li><a href="/en/contatti.html">Contact</a></li>
-    <li class="lang-toggle"><a href="/it/index.html">IT</a></li>
-  </ul>
-</nav>
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Itinerari</a>
+        <ul class="dropdown-content">
+          <li><a href="roccelletta.html">Roccelletta</a></li>
+          <li><a href="squillace.html">Squillace</a></li>
+          <li><a href="montauro.html">Montauro</a></li>
+          <li><a href="montepaone.html">Montepaone</a></li>
+          <li><a href="soverato.html">Soverato</a></li>
+          <li><a href="copanello.html">Copanello</a></li>
+          <li><a href="gasperina.html">Gasperina</a></li>
+          <li><a href="davoli.html">Davoli</a></li>
+          <li><a href="badolato.html">Badolato</a></li>
+        </ul>
+      </li>
+      <li><a href="contatti.html">Contatti</a></li>
+      <!--<li class="lang-toggle"><a href="./en/index.html">EN</a></li>-->
+    </ul>
+  </nav>
 
+  <section class="section contact">
+    <h2>Contact</h2>
+    <div class="contact-details">
+      <p><strong>Email:</strong> <a href="mailto:scootertour@gmail.com">scootertour@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:3331231231">+39 333 123 1231</a></p>
+    </div>
+    <p class="form-info">You can contact us directly or leave your details and we will get back to you.</p>
+    <form id="contact-form">
+      <input type="text" name="nome" placeholder="Your name" required>
+      <input type="text" name="recapito" placeholder="Your email or phone" required>
+      <textarea name="messaggio" placeholder="Your message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-<section class="section contact">
-  <h2>Contact</h2>
-  <div class="contact-details">
-    <p><strong>Email:</strong> <a href="mailto:scootertour@gmail.com">scootertour@gmail.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:3331231231">+39 333 123 1231</a></p>
-  </div>
-  <p class="form-info">You can contact us directly or leave your details and we will get back to you.</p>
-  <form id="contact-form">
-    <input type="text" name="nome" placeholder="Your name" required>
-    <input type="text" name="recapito" placeholder="Your email or phone" required>
-    <textarea name="messaggio" placeholder="Your message" rows="5" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Scooter Tour - Tutti i diritti riservati</p>
+      <p>Seguici su <a href="https://www.instagram.com/scootertour__?utm_source=qr&igsh=eTNucmY1bDVpeXZw">Instagram</a></p>
+    </div>
+  </footer>
 
-</body></html>
+</body>
+</html>
