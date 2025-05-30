@@ -27,18 +27,18 @@
     </ul>
   </nav>
 
-  <section class="section contact">
-    <h2>Contact</h2>
+    <section class="section contact">
+    <h2>Contatti</h2>
     <div class="contact-details">
-      <p><strong>Email:</strong> <a href="mailto:scootertour@gmail.com">scootertour@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:3331231231">+39 333 123 1231</a></p>
+      <p><strong>Email:</strong> <a href="mailto:scootertour2025@gmail.com">scootertour2025@gmail.com</a></p>
+      <p><strong>Telefono:</strong> <a href="tel:+393808618975">+39 380 861 8975</a></p>
     </div>
-    <p class="form-info">You can contact us directly or leave your details and we will get back to you.</p>
+    <p class="form-info">Puoi contattarci direttamente via email o telefono, oppure lascia i tuoi dati e ti ricontatteremo al più presto.</p>
     <form id="contact-form">
-      <input type="text" name="nome" placeholder="Your name" required>
-      <input type="text" name="recapito" placeholder="Your email or phone" required>
-      <textarea name="messaggio" placeholder="Your message" rows="5" required></textarea>
-      <button type="submit">Send</button>
+      <input type="text" name="nome" placeholder="Il tuo nome" required>
+      <input type="text" name="recapito" placeholder="La tua email o telefono" required>
+      <textarea name="messaggio" placeholder="Il tuo messaggio" rows="5" required></textarea>
+      <button type="submit">Invia</button>
     </form>
   </section>
 
@@ -48,6 +48,26 @@
       <p>Seguici su <a href="https://www.instagram.com/scootertour__?utm_source=qr&igsh=eTNucmY1bDVpeXZw">Instagram</a></p>
     </div>
   </footer>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const nome = form.nome.value;
+      const recapito = form.recapito.value;
+      const messaggio = form.messaggio.value;
+
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxTU5WbzhngC9ROR45Ou5KqbiyZxcajL2KxrXSIvQd1B18jJKeYZmXgj3KKjbh5awCQaQ/exec';
+      fetch(scriptURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ nome, recapito, messaggio })
+      })
+      .then(response => alert("Messaggio inviato con successo!"))
+      .catch(error => alert("Si è verificato un errore."));
+    });
+  </script>
 
 </body>
 </html>
