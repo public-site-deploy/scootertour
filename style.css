@@ -258,18 +258,15 @@ footer {
   cursor: pointer;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
   nav.top-nav {
     padding: 1rem;
   }
 
-  /* Mostra hamburger */
   .hamburger {
     display: block;
   }
 
-  /* Nasconde il menu orizzontale */
   nav.top-nav ul {
     display: none;
     flex-direction: column;
@@ -282,7 +279,6 @@ footer {
     padding: 1rem 0;
   }
 
-  /* Mostra menu quando attivo */
   nav.top-nav ul.active {
     display: flex;
   }
@@ -293,7 +289,7 @@ footer {
   }
 
   nav.top-nav .dropdown-content {
-    position: static; /* i sotto-menu si aprono sotto */
+    position: static;
     box-shadow: none;
     border-radius: 0;
     background-color: #f9f9f9;
