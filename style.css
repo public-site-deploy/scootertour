@@ -250,3 +250,57 @@ footer {
 .footer-container a:hover {
   text-decoration: underline;
 }
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav.top-nav {
+    padding: 1rem;
+  }
+
+  /* Mostra hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Nasconde il menu orizzontale */
+  nav.top-nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background-color: #3db0ff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  /* Mostra menu quando attivo */
+  nav.top-nav ul.active {
+    display: flex;
+  }
+
+  nav.top-nav ul li {
+    text-align: center;
+    width: 100%;
+  }
+
+  nav.top-nav .dropdown-content {
+    position: static; /* i sotto-menu si aprono sotto */
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #f9f9f9;
+  }
+
+  nav.top-nav .dropdown-content li a {
+    padding: 0.75rem;
+    color: #222;
+  }
+}
